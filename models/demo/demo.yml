@@ -5,14 +5,14 @@ models:
   - name: employee
     description: "DBT Model for employee table"
     columns:
-      - name: EMP_ID
+      - name: emp_id
         tests:
-        - unique
-        - not_null
-        - accepted_values:
-            values: ['1','2','3','4','5']  
-            config:
-              severity: warn
+          - unique
+          - not_null
+          - accepted_values:
+              values: ['1','2','3','4','5']
+              config:
+                severity: warn
 
 sources:
   - name: employee
